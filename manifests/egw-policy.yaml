@@ -1,0 +1,28 @@
+---
+apiVersion: projectcalico.org/v3
+kind: EgressGatewayPolicy
+metadata:
+  name: "egress-gateway-policy"
+spec:
+  rules:
+    - description: "Default Egress Gateway"
+      gateway:
+        namespaceSelector: "projectcalico.org/name == 'default'"
+        selector: "egress-gateway == 'egw-4'"
+      gatewayPreference: PreferNodeLocal
+
+    - description: "Google DNS Specific Egress Gateway"
+      destination:
+        cidr: 8.8.8.8
+      gateway:
+        namespaceSelector: "projectcalico.org/name == 'default'"
+        selector: "egress-gateway == 'egw-5'"
+      gatewayPreference: PreferNodeLocal
+
+    - description: "Level3 Specific Egress Gateway"
+      destination:
+        cidr: 4.2.2.2
+      gateway:
+        namespaceSelector: "projectcalico.org/name == 'default'"
+        selector: "egress-gateway == 'egw-6'"
+      gatewayPreference: PreferNodeLocal

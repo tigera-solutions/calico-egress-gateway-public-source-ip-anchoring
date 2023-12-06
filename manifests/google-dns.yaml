@@ -1,0 +1,10 @@
+kind: GlobalNetworkSet
+apiVersion: projectcalico.org/v3
+metadata:
+  name: google-dns
+  labels:
+    google: dns
+spec:
+  nets:
+    - 8.8.8.8/32
+  allowedEgressDomains: []

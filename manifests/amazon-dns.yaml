@@ -1,0 +1,10 @@
+kind: GlobalNetworkSet
+apiVersion: projectcalico.org/v3
+metadata:
+  name: amazon-dns
+  labels:
+    az: us-east-1a
+spec:
+  nets:
+    - 10.0.0.2/32
+  allowedEgressDomains: []

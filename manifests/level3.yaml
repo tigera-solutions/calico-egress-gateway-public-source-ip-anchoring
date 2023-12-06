@@ -1,0 +1,10 @@
+kind: GlobalNetworkSet
+apiVersion: projectcalico.org/v3
+metadata:
+  name: level3
+  labels:
+    level3: dns
+spec:
+  nets:
+    - 4.2.2.2/32
+  allowedEgressDomains: []
