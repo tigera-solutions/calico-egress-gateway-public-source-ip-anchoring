@@ -63,7 +63,8 @@ kubectl get tigerastatus
 #### 1. Join the EKS Cluster to Calico Cloud
 Join your EKS cluster to [Calico Cloud](https://www.calicocloud.io/home) as illustrated:
 
-![infra](images/cc-join.gif)
+https://github.com/tigera-solutions/calico-egress-gateway-public-source-ip-anchoring/assets/101850/ce530de1-15c3-4cd3-9af1-aa309218065f
+
 
 #### 2. Verify the Cluster Status
 Check the cluster status:
@@ -89,6 +90,7 @@ kubectl patch felixconfiguration default --type='merge' -p '{
 #### 2. Go to the Kubernetes Directory
 Change to the `k8s` directory:
 ```sh
+cd ..
 cd k8s
 ```
 
