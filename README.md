@@ -81,6 +81,8 @@ kubectl patch felixconfiguration default --type='merge' -p '{
   "spec": {
     "egressIPSupport": "EnabledPerNamespaceOrPerPod",
     "awsSecondaryIPSupport": "Enabled",
+    "dnsLogsFlushInterval": "15s",
+    "l7LogsFlushInterval": "15s",
     "flowLogsFlushInterval": "15s",
     "flowLogsFileAggregationKindForAllowed": 1
   }
