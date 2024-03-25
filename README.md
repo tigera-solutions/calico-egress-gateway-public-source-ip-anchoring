@@ -177,5 +177,6 @@ To teardown and remove the resources created in this example:
 
 ```sh
 cd aws
+terraform state rm helm_release.calico
 terraform destroy --auto-approve
 ```
